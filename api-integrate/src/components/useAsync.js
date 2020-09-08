@@ -1,3 +1,8 @@
+/*
+  useAsync 함수는 두가지 파라미터를 받아옴
+  첫번째 파라미터 - API 요청을 시작하는 함수
+  두번째 파라미터 - deps 해당 함수 안에서 사용하는 useEffect
+*/
 import { useReducer, useEffect, useCallback } from "react";
 
 // LOADING, SUCCESS, ERROR
