@@ -14,9 +14,7 @@ function Profiles() {
             to="/profiles/jhyounyaho"
             activeStyle={{ background: "black", color: "white" }}
             activeClassName="active"
-            isActive={(match, location) => {
-              return match.params.blbal;
-            }}
+            isActive={(match, location) => {}}
           >
             jhyounyaho
           </NavLink>
