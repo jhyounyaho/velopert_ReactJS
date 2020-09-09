@@ -1,6 +1,8 @@
 import React from "react";
 import Profile from "./Profile";
-import { Link, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
+import WithRouterSample from "./WithRouterSample";
+import RouterHookSample from "./RouterHookSample";
 
 function Profiles() {
   return (
@@ -8,10 +10,25 @@ function Profiles() {
       <h3>사용자 목록</h3>
       <ul>
         <li>
-          <Link to="/profiles/jhyounyaho">jhyounyaho</Link>
+          <NavLink
+            to="/profiles/jhyounyaho"
+            activeStyle={{ background: "black", color: "white" }}
+            activeClassName="active"
+            isActive={(match, location) => {
+              return match.params.blbal;
+            }}
+          >
+            jhyounyaho
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/homer">homer</Link>
+          <NavLink
+            to="/profiles/homer"
+            activeStyle={{ background: "black", color: "white" }}
+            activeClassName="active"
+          >
+            homer
+          </NavLink>
         </li>
       </ul>
       <Route
@@ -20,6 +37,8 @@ function Profiles() {
         render={() => <div>사용자를 선택하세요</div>}
       />
       <Route path="/profiles/:username" component={Profile} />
+      <WithRouterSample />
+      <RouterHookSample />
     </div>
   );
 }

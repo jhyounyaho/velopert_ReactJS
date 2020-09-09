@@ -1,6 +1,7 @@
 설치
 yarn add react-router-dom
 yarn add qs
+yarn add use-react-router
 
 라우팅
 
@@ -93,3 +94,30 @@ Query
 - 라우트로 사용한 라우트 안에 한번 더쓰기!
 - 페이지를 만들때 특정 경로의 tab이 있는 경우 서브라우트 사용
 - 태그 선택시 페이지 내부에서 내용이 바뀌어지는 경우 사용
+
+리액트 라우터 부가기능
+
+history 객체
+
+- 라우터로 사용되는 컴포넌트에게 props로 전달됨. 이 객체를 사용해 컴포넌트에서 라우터에 직접적으로 접근 할 수 있다.
+- 특정 함수를 호출했을때 특정 경로로 이동하거나 뒤로가거나 페이지 이탈을 막을수 있다.
+
+withRouter
+
+- 라우터 컴포넌트가 아닌 곳에서 match, location, history 사용
+
+Switch
+
+- 여러 라우트 중 하나만 보여줌
+
+NavLink
+
+- 현재 주소와 일치한다면 스타일 바꾸기
+
+Prompt
+
+Redirect
+
+Route Config
+
+useReactRouter Hook 사용하기
